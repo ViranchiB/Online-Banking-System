@@ -34,4 +34,64 @@ public class Transfer {
     protected void onCreate() {
         transferDate = LocalDateTime.now();
     }
+
+    public Transfer() {
+    }
+
+    public Transfer(Long transferId, Account senderAccount, Account receiverAccount, BigDecimal amount, LocalDateTime transferDate, TransferStatus status) {
+        this.transferId = transferId;
+        this.senderAccount = senderAccount;
+        this.receiverAccount = receiverAccount;
+        this.amount = amount;
+        this.transferDate = transferDate;
+        this.status = status;
+    }
+
+    public Long getTransferId() {
+        return transferId;
+    }
+
+    public void setTransferId(Long transferId) {
+        this.transferId = transferId;
+    }
+
+    public Account getSenderAccount() {
+        return senderAccount;
+    }
+
+    public void setSenderAccount(Account senderAccount) {
+        this.senderAccount = senderAccount;
+    }
+
+    public Account getReceiverAccount() {
+        return receiverAccount;
+    }
+
+    public void setReceiverAccount(Account receiverAccount) {
+        this.receiverAccount = receiverAccount;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public LocalDateTime getTransferDate() {
+        return transferDate;
+    }
+
+    public void setTransferDate(LocalDateTime transferDate) {
+        this.transferDate = transferDate;
+    }
+
+    public TransferStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TransferStatus status) {
+        this.status = status;
+    }
 }

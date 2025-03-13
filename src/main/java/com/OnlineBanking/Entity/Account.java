@@ -39,4 +39,73 @@ public class Account {
     protected void onCreate() {
         createdAt = LocalDateTime.now();
     }
+
+    public Account() {
+    }
+
+    public Account(Long accountId, String accountNumber, User user, AccountType accountType, BigDecimal balance, LocalDateTime createdAt, Set<Transaction> transactions) {
+        this.accountId = accountId;
+        this.accountNumber = accountNumber;
+        this.user = user;
+        this.accountType = accountType;
+        this.balance = balance;
+        this.createdAt = createdAt;
+        this.transactions = transactions;
+    }
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Set<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(Set<Transaction> transactions) {
+        this.transactions = transactions;
+    }
 }
