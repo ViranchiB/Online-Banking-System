@@ -11,7 +11,7 @@ import jakarta.persistence.*;
 public class Transfer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long transferId;
 
     @ManyToOne
     @JoinColumn(name = "sender_account_id", nullable = false)
